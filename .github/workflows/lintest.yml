@@ -20,5 +20,13 @@ jobs:
       run: earthly --version
     
     - name: Run lintest
-      run: earthly --ci +lintest
+      run: earthly --strict +lintest  # Can't use --ci because we want output
+
+    - name: Check Earthly local output
+      run: ls -la .
+
+    - uses: codecov/codecov-action@v2
+      with:
+        fail_ci_if_error: true
+        verbose: true
 

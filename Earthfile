@@ -42,7 +42,7 @@ test:  ## Run tests and save coverage
     RUN --mount=type=cache,target=/root/.cache/go-build -- \
         go test -v -mod=readonly -coverprofile=cover.out ./... \
         && gocov convert cover.out | gocov-xml > coverage.xml
-    SAVE ARTIFACT coverage.xml
+    SAVE ARTIFACT coverage.xml AS LOCAL coverage.xml
 
 
 lintest: ## One step for lint and test
