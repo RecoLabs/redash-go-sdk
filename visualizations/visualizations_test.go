@@ -7,10 +7,10 @@ import (
 
 	"github.com/recolabs/redash-go-sdk/common/random"
 	"github.com/recolabs/redash-go-sdk/gen/client"
-	"github.com/recolabs/redash-go-sdk/gen/models"
-	"github.com/recolabs/redash-go-sdk/options"
 	gen_visualizations "github.com/recolabs/redash-go-sdk/gen/client/visualizations"
+	"github.com/recolabs/redash-go-sdk/gen/models"
 	mock_visualizations "github.com/recolabs/redash-go-sdk/mocks/visualizations"
+	"github.com/recolabs/redash-go-sdk/options"
 )
 
 const (
