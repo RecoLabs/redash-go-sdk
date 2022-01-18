@@ -16,7 +16,7 @@ import (
 	"github.com/go-openapi/swag"
 	"github.com/go-openapi/validate"
 
-	"github.com/recolabs/reco/redash-client/gen/models"
+	"github.com/recolabs/redash-go-sdk/gen/models"
 )
 
 // PostQueriesIDResultsReader is a Reader for the PostQueriesIDResults structure.

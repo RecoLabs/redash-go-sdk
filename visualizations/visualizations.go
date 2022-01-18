@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/recolabs/reco/redash-client/gen/client"
-	vis "github.com/recolabs/reco/redash-client/gen/client/visualizations"
-	"github.com/recolabs/reco/redash-client/gen/models"
-	"github.com/recolabs/reco/redash-client/options"
+	"github.com/recolabs/redash-go-sdk/gen/client"
+	"github.com/recolabs/redash-go-sdk/gen/models"
+	"github.com/recolabs/redash-go-sdk/options"
+	vis "github.com/recolabs/redash-go-sdk/gen/client/visualizations"
 )
 
 const (

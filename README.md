@@ -70,8 +70,8 @@ And then, you can copy your API key in the "Account" tab:
 import (
     "fmt"
 
-    redashclient "github.com/recolabs/reco/redash-client"
-    "github.com/recolabs/reco/redash-client/gen/client"
+    redashclient "github.com/recolabs/redash-go-sdk"
+    "github.com/recolabs/redash-go-sdk/gen/client"
 )
 
 func main() {
@@ -151,7 +151,7 @@ queries, err := redashClient.Queries.Get(1)
 #### Add DataSource
 
 ```golang
-import redashclient "github.com/recolabs/reco/redash-client/datasources"
+import redashclient "github.com/recolabs/redash-go-sdk/datasources"
 
 ...
 
@@ -191,7 +191,7 @@ dataSources, err := redashClient.Visualizations.GetURL(visualizationID, queryID,
 #### Add Visualization
 
 ```golang
-import redashclient "github.com/recolabs/reco/redash-client/visualizations"
+import redashclient "github.com/recolabs/redash-go-sdk/visualizations"
 
 ...
 
@@ -306,14 +306,14 @@ Then run the following if you're on Linux:
 
 ```sh
 godoc -http=localhost:6060 &
-xdg-open http://localhost:6060/pkg/github.com/recolabs/reco/redash-client
+xdg-open http://localhost:6060/pkg/github.com/recolabs/redash-go-sdk
 ```
 
 MacOS:
 
 ```sh
 godoc -http=localhost:6060 &
-open http://localhost:6060/pkg/github.com/recolabs/reco/redash-client
+open http://localhost:6060/pkg/github.com/recolabs/redash-go-sdk
 ```
 
 ### Linting

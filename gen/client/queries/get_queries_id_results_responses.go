@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/recolabs/reco/redash-client/gen/models"
+	"github.com/recolabs/redash-go-sdk/gen/models"
 )
 
 // GetQueriesIDResultsReader is a Reader for the GetQueriesIDResults structure.

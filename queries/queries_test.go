@@ -5,11 +5,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/recolabs/reco/redash-client/gen/client"
-	gen_queries "github.com/recolabs/reco/redash-client/gen/client/queries"
-	"github.com/recolabs/reco/redash-client/gen/models"
-	mock_queries "github.com/recolabs/reco/redash-client/mocks/queries"
-	"github.com/recolabs/reco/redash-client/options"
+	"github.com/recolabs/redash-go-sdk/gen/client"
+	"github.com/recolabs/redash-go-sdk/gen/models"
+	"github.com/recolabs/redash-go-sdk/options"
+	gen_queries "github.com/recolabs/redash-go-sdk/gen/client/queries"
+	mock_queries "github.com/recolabs/redash-go-sdk/mocks/queries"
 )
 
 const (
