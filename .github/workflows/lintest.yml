@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build:
+  lintest:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
