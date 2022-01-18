@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"github.com/go-openapi/strfmt"
-	gen_users "github.com/recolabs/reco/redash-client/gen/client/users"
-	mock_users "github.com/recolabs/reco/redash-client/mocks/users"
+	gen_users "github.com/recolabs/redash-go-sdk/gen/client/users"
+	mock_users "github.com/recolabs/redash-go-sdk/mocks/users"
 
-	"github.com/recolabs/reco/redash-client/gen/client"
-	"github.com/recolabs/reco/redash-client/gen/models"
+	"github.com/recolabs/redash-go-sdk/gen/client"
+	"github.com/recolabs/redash-go-sdk/gen/models"
 )
 
 const (

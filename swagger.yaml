@@ -4,7 +4,7 @@ info:
   version: 10.1.0
   title: Redash SDK
   description: |
-    This is a simple SDK for programmatic management of Redash. For more information, see github.com/recolabs/reco/redash-client. We created this client based on the python code of version 10.1.0 of redash - https://github.com/getredash/redash
+    This is a simple SDK for programmatic management of Redash. For more information, see github.com/recolabs/redash-go-sdk. We created this client based on the python code of version 10.1.0 of redash - https://github.com/getredash/redash
   contact:
     name: recolabs.ai
     email: rnd@recolabs.ai

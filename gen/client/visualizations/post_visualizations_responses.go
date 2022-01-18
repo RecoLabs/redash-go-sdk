@@ -14,7 +14,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"github.com/recolabs/reco/redash-client/gen/models"
+	"github.com/recolabs/redash-go-sdk/gen/models"
 )
 
 // PostVisualizationsReader is a Reader for the PostVisualizations structure.

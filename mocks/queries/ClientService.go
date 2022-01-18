@@ -4,7 +4,7 @@ package queriesmock
 
 import (
 	runtime "github.com/go-openapi/runtime"
-	queries "github.com/recolabs/reco/redash-client/gen/client/queries"
+	queries "github.com/recolabs/redash-go-sdk/gen/client/queries"
 	mock "github.com/stretchr/testify/mock"
 )
 

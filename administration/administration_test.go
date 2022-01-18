@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/recolabs/reco/redash-client/gen/client"
-	admin "github.com/recolabs/reco/redash-client/gen/client/administration"
-	mock_administration "github.com/recolabs/reco/redash-client/mocks/administration"
+	"github.com/recolabs/redash-go-sdk/gen/client"
+	admin "github.com/recolabs/redash-go-sdk/gen/client/administration"
+	mock_administration "github.com/recolabs/redash-go-sdk/mocks/administration"
 )
 
 const (

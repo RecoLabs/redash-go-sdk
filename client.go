@@ -2,8 +2,8 @@
 // Client Initialization
 //
 // import (
-//    redashclient "github.com/recolabs/reco/redash-client/redashClient"
-//    "github.com/recolabs/reco/redash-client/gen/client"
+//    redashclient "github.com/recolabs/redash-go-sdk/redashClient"
+//    "github.com/recolabs/redash-go-sdk/gen/client"
 // )
 // redashClient := redashclient.NewClient(
 // 	 "{API_KEY}",
@@ -29,12 +29,12 @@ package redashclient
 
 import (
 	httptransport "github.com/go-openapi/runtime/client"
-	"github.com/recolabs/reco/redash-client/administration"
-	"github.com/recolabs/reco/redash-client/datasources"
-	"github.com/recolabs/reco/redash-client/gen/client"
-	"github.com/recolabs/reco/redash-client/queries"
-	"github.com/recolabs/reco/redash-client/users"
-	"github.com/recolabs/reco/redash-client/visualizations"
+	"github.com/recolabs/redash-go-sdk/administration"
+	"github.com/recolabs/redash-go-sdk/datasources"
+	"github.com/recolabs/redash-go-sdk/gen/client"
+	"github.com/recolabs/redash-go-sdk/queries"
+	"github.com/recolabs/redash-go-sdk/users"
+	"github.com/recolabs/redash-go-sdk/visualizations"
 )
 
 // Client wrapping ReDash's rest API

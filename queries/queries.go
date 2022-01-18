@@ -1,10 +1,10 @@
 package queries
 
 import (
-	"github.com/recolabs/reco/redash-client/gen/client"
-	"github.com/recolabs/reco/redash-client/gen/client/queries"
-	"github.com/recolabs/reco/redash-client/gen/models"
-	"github.com/recolabs/reco/redash-client/options"
+	"github.com/recolabs/redash-go-sdk/gen/client"
+	"github.com/recolabs/redash-go-sdk/gen/client/queries"
+	"github.com/recolabs/redash-go-sdk/gen/models"
+	"github.com/recolabs/redash-go-sdk/options"
 )
 
 type RequestWrapper struct {

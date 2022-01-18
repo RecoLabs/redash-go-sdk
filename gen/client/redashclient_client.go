@@ -10,11 +10,11 @@ import (
 	httptransport "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/recolabs/reco/redash-client/gen/client/administration"
-	"github.com/recolabs/reco/redash-client/gen/client/data_sources"
-	"github.com/recolabs/reco/redash-client/gen/client/queries"
-	"github.com/recolabs/reco/redash-client/gen/client/users"
-	"github.com/recolabs/reco/redash-client/gen/client/visualizations"
+	"github.com/recolabs/redash-go-sdk/gen/client/administration"
+	"github.com/recolabs/redash-go-sdk/gen/client/data_sources"
+	"github.com/recolabs/redash-go-sdk/gen/client/queries"
+	"github.com/recolabs/redash-go-sdk/gen/client/users"
+	"github.com/recolabs/redash-go-sdk/gen/client/visualizations"
 )
 
 // Default redashclient HTTP client.

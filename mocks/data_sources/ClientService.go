@@ -3,7 +3,7 @@
 package data_sourcesmock
 
 import (
-	data_sources "github.com/recolabs/reco/redash-client/gen/client/data_sources"
+	data_sources "github.com/recolabs/redash-go-sdk/gen/client/data_sources"
 	mock "github.com/stretchr/testify/mock"
 
 	runtime "github.com/go-openapi/runtime"
