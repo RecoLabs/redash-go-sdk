@@ -1,4 +1,4 @@
-module github.com/recolabs/reco/redash-client
+module github.com/recolabs/redash-go-sdk
 
 go 1.16
 
@@ -17,6 +17,6 @@ require (
 	github.com/go-stack/stack v1.8.1 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
-	go.mongodb.org/mongo-driver v1.8.1 // indirect
-	golang.org/x/net v0.0.0-20211215060638-4ddde0e984e9 // indirect
+	go.mongodb.org/mongo-driver v1.8.2 // indirect
+	golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d // indirect
 )
