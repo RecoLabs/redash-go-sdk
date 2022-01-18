@@ -22,8 +22,3 @@ jobs:
     - name: Run lintest
       run: earthly --ci +lintest
 
-    - name: Build
-      run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
