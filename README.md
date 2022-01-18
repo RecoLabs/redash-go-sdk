@@ -1,10 +1,19 @@
-# Redash Client
+# Redash Go SDK
 
-This is a simple SDK for the programmatic management of Redash. The main
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/recolabs/redash-go-sdk)](https://github.com/RecoLabs/redash-go-sdk/releases)
+[![Build](https://github.com/RecoLabs/redash-go-sdk/actions/workflows/lintest.yml/badge.svg)](https://github.com/RecoLabs/redash-go-sdk/actions/workflows/lintest.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/recolabs/redash-go-sdk)](https://app.codecov.io/gh/RecoLabs/redash-go-sdk)
+[![Go Reference](https://pkg.go.dev/badge/github.com/recolabs/redash-go-sdk.svg)](https://pkg.go.dev/github.com/recolabs/redash-go-sdk)
+[![Sourcegraph](https://sourcegraph.com/github.com/gorilla/mux/-/badge.svg)](https://sourcegraph.com/github.com/gorilla/mux?badge)
+
+![GitHub Repo stars](https://img.shields.io/github/stars/recolabs/redash-go-sdk?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/recolabs_ai?style=social)
+
+An SDK for the programmatic management of Redash. The main
 component of the SDK is a **client**, which is a go wrapper of
 Redash's REST API.
 
-- [Redash Client](#redash-client)
+- [Redash Go SDK](#redash-go-sdk)
   - [Usage](#usage)
     - [Installation](#installation)
     - [Client Initialization](#client-initialization)
