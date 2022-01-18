@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/recolabs/redash-go-sdk/gen/client"
-	"github.com/recolabs/redash-go-sdk/gen/models"
-	"github.com/recolabs/redash-go-sdk/options"
 	gen_data_sources "github.com/recolabs/redash-go-sdk/gen/client/data_sources"
+	"github.com/recolabs/redash-go-sdk/gen/models"
 	mock_data_sources "github.com/recolabs/redash-go-sdk/mocks/data_sources"
+	"github.com/recolabs/redash-go-sdk/options"
 )
 
 const (
