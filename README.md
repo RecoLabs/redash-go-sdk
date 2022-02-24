@@ -4,7 +4,7 @@
 [![Build](https://github.com/RecoLabs/redash-go-sdk/actions/workflows/lintest.yml/badge.svg)](https://github.com/RecoLabs/redash-go-sdk/actions/workflows/lintest.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/recolabs/redash-go-sdk)](https://app.codecov.io/gh/RecoLabs/redash-go-sdk)
 [![Go Reference](https://pkg.go.dev/badge/github.com/recolabs/redash-go-sdk.svg)](https://pkg.go.dev/github.com/recolabs/redash-go-sdk)
-[![Sourcegraph](https://sourcegraph.com/github.com/gorilla/mux/-/badge.svg)](https://sourcegraph.com/github.com/gorilla/mux?badge)
+[![Sourcegraph](https://sourcegraph.com/github.com/RecoLabs/redash-go-sdk/-/badge.svg)](https://sourcegraph.com/github.com/RecoLabs/redash-go-sdk?badge)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/recolabs/redash-go-sdk?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/recolabs_ai?style=social)
