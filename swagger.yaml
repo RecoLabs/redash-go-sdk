@@ -65,6 +65,24 @@ paths:
           schema:
             $ref: '#/definitions/error'
   /data_sources/{id}:
+    get:
+      consumes:
+      - application/x-www-form-urlencoded
+      tags: [DataSources]
+      parameters:
+      - in: path
+        name: id
+        type: integer
+        required: true
+      responses:
+        '200':
+          description: Get data source by ID
+          schema:
+            $ref: '#/definitions/dataSource'
+        default:
+          description: error
+          schema:
+            $ref: '#/definitions/error'
     delete:
       consumes:
       - application/x-www-form-urlencoded

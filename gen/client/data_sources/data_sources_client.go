@@ -30,6 +30,8 @@ type ClientOption func(*runtime.ClientOperation)
 type ClientService interface {
 	DeleteDataSourcesID(params *DeleteDataSourcesIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteDataSourcesIDNoContent, error)
 
+	GetDataSourcesID(params *GetDataSourcesIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDataSourcesIDOK, error)
+
 	PostDataSources(params *PostDataSourcesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PostDataSourcesOK, error)
 
 	List(params *ListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListOK, error)
@@ -72,6 +74,44 @@ func (a *Client) DeleteDataSourcesID(params *DeleteDataSourcesIDParams, authInfo
 	}
 	// unexpected success response
 	unexpectedSuccess := result.(*DeleteDataSourcesIDDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+  GetDataSourcesID get data sources ID API
+*/
+func (a *Client) GetDataSourcesID(params *GetDataSourcesIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDataSourcesIDOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetDataSourcesIDParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "GetDataSourcesID",
+		Method:             "GET",
+		PathPattern:        "/data_sources/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/x-www-form-urlencoded"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &GetDataSourcesIDReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*GetDataSourcesIDOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*GetDataSourcesIDDefault)
 	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
 }
 
