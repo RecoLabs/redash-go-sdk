@@ -3,6 +3,7 @@ package datasources
 
 import (
 	"github.com/recolabs/redash-go-sdk/gen/client"
+	"github.com/recolabs/redash-go-sdk/gen/client/data_sources"
 	ds "github.com/recolabs/redash-go-sdk/gen/client/data_sources"
 	"github.com/recolabs/redash-go-sdk/gen/models"
 	"github.com/recolabs/redash-go-sdk/options"
@@ -61,6 +62,38 @@ func (requestWrapper *RequestWrapper) Add(dataSource *models.DataSource) (*model
 	if err != nil {
 		return nil, err
 	}
+	return response.GetPayload(), nil
+}
+
+// Update the provided DataSource in Redash,
+func (requestWrapper *RequestWrapper) Update(dataSource *models.DataSource) (*models.DataSource, error) {
+	err := dataSource.Validate(nil)
+	if err != nil {
+		return nil, err
+	}
+
+	addParams := ds.NewPostDataSourcesIDParams().WithID(dataSource.ID).WithBody(ds.PostDataSourcesIDBody{
+		Name:    *dataSource.Name,
+		Options: dataSource.Options,
+		Type:    *dataSource.Type,
+	})
+
+	response, err := requestWrapper.httpClient.DataSources.PostDataSourcesID(addParams, nil, requestWrapper.opts...)
+	if err != nil {
+		return nil, err
+	}
+	return response.GetPayload(), nil
+}
+
+// GetUser gets the details admin's user details
+func (requestWrapper *RequestWrapper) Get(dsID int64) (*models.DataSource, error) {
+	getDSParams := data_sources.NewGetDataSourcesIDParams()
+	getDSParams.ID = dsID
+	response, err := requestWrapper.httpClient.DataSources.GetDataSourcesID(getDSParams, nil, requestWrapper.opts...)
+	if err != nil {
+		return nil, err
+	}
+
 	return response.GetPayload(), nil
 }
 
