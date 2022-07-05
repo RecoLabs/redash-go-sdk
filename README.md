@@ -153,8 +153,8 @@ dataSources, err := redashClient.DataSources.List()
 #### Get DataSource
 
 ```golang
-queryID := 1
-queries, err := redashClient.Queries.Get(1)
+dsID := 1
+queries, err := redashClient.DataSources.Get(dsID)
 ```
 
 #### Add DataSource
@@ -184,6 +184,29 @@ responseQuery, err := redashClient.Queries.Add(ds)
 ```golang
 queryID := 1
 err := redashClient.DataSources.Delete(queryID)
+```
+
+#### Update DataSource
+
+```golang
+import redashclient "github.com/recolabs/redash-go-sdk/datasources"
+
+...
+
+dataSourceType := "pg"
+dataSourceName := "test"
+postgresqlOptions := `{
+    "dbname": "aa",
+        "host": "1.1.1.1",
+        "port": 5432
+}`
+
+ds, err := datasources.NewDataSource(dataSourceType,dataSourceName, postgresqlOptions)
+if err != nil {
+fmt.Printf("%v\n", err)
+}
+ds.ID = 1
+responseQuery, err := redashClient.Queries.Update(ds)
 ```
 
 ### Visualizations
