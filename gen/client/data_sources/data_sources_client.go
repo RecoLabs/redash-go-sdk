@@ -34,6 +34,8 @@ type ClientService interface {
 
 	PostDataSources(params *PostDataSourcesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PostDataSourcesOK, error)
 
+	PostDataSourcesID(params *PostDataSourcesIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PostDataSourcesIDOK, error)
+
 	List(params *ListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListOK, error)
 
 	SetTransport(transport runtime.ClientTransport)
@@ -150,6 +152,44 @@ func (a *Client) PostDataSources(params *PostDataSourcesParams, authInfo runtime
 	}
 	// unexpected success response
 	unexpectedSuccess := result.(*PostDataSourcesDefault)
+	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
+}
+
+/*
+  PostDataSourcesID post data sources ID API
+*/
+func (a *Client) PostDataSourcesID(params *PostDataSourcesIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PostDataSourcesIDOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewPostDataSourcesIDParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "PostDataSourcesID",
+		Method:             "POST",
+		PathPattern:        "/data_sources/{id}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &PostDataSourcesIDReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*PostDataSourcesIDOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	unexpectedSuccess := result.(*PostDataSourcesIDDefault)
 	return nil, runtime.NewAPIError("unexpected success response: content available as default response in error", unexpectedSuccess, unexpectedSuccess.Code())
 }
 

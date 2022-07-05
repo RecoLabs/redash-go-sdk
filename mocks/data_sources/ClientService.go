@@ -134,6 +134,36 @@ func (_m *ClientService) PostDataSources(params *data_sources.PostDataSourcesPar
 	return r0, r1
 }
 
+// PostDataSourcesID provides a mock function with given fields: params, authInfo, opts
+func (_m *ClientService) PostDataSourcesID(params *data_sources.PostDataSourcesIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...data_sources.ClientOption) (*data_sources.PostDataSourcesIDOK, error) {
+	_va := make([]interface{}, len(opts))
+	for _i := range opts {
+		_va[_i] = opts[_i]
+	}
+	var _ca []interface{}
+	_ca = append(_ca, params, authInfo)
+	_ca = append(_ca, _va...)
+	ret := _m.Called(_ca...)
+
+	var r0 *data_sources.PostDataSourcesIDOK
+	if rf, ok := ret.Get(0).(func(*data_sources.PostDataSourcesIDParams, runtime.ClientAuthInfoWriter, ...data_sources.ClientOption) *data_sources.PostDataSourcesIDOK); ok {
+		r0 = rf(params, authInfo, opts...)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*data_sources.PostDataSourcesIDOK)
+		}
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(*data_sources.PostDataSourcesIDParams, runtime.ClientAuthInfoWriter, ...data_sources.ClientOption) error); ok {
+		r1 = rf(params, authInfo, opts...)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetTransport provides a mock function with given fields: transport
 func (_m *ClientService) SetTransport(transport runtime.ClientTransport) {
 	_m.Called(transport)
