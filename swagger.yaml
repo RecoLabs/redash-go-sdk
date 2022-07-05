@@ -65,6 +65,35 @@ paths:
           schema:
             $ref: '#/definitions/error'
   /data_sources/{id}:
+    post:
+      tags: [DataSources]
+      consumes:
+      - application/json
+      parameters:
+      - in: path
+        name: id
+        type: integer
+        required: true
+      - name: body
+        in: body
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            options:
+              type: object
+            type:
+              type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/dataSource'
+        default:
+          description: error
+          schema:
+            $ref: '#/definitions/error'
     get:
       consumes:
       - application/x-www-form-urlencoded
