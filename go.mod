@@ -18,5 +18,5 @@ require (
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
 	go.mongodb.org/mongo-driver v1.8.2 // indirect
-	golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d // indirect
+	golang.org/x/text v0.4.0 // indirect
 )
