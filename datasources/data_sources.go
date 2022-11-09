@@ -3,7 +3,6 @@ package datasources
 
 import (
 	"github.com/recolabs/redash-go-sdk/gen/client"
-	"github.com/recolabs/redash-go-sdk/gen/client/data_sources"
 	ds "github.com/recolabs/redash-go-sdk/gen/client/data_sources"
 	"github.com/recolabs/redash-go-sdk/gen/models"
 	"github.com/recolabs/redash-go-sdk/options"
@@ -87,7 +86,7 @@ func (requestWrapper *RequestWrapper) Update(dataSource *models.DataSource) (*mo
 
 // GetUser gets the details admin's user details
 func (requestWrapper *RequestWrapper) Get(dsID int64) (*models.DataSource, error) {
-	getDSParams := data_sources.NewGetDataSourcesIDParams()
+	getDSParams := ds.NewGetDataSourcesIDParams()
 	getDSParams.ID = dsID
 	response, err := requestWrapper.httpClient.DataSources.GetDataSourcesID(getDSParams, nil, requestWrapper.opts...)
 	if err != nil {
