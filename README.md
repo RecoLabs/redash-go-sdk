@@ -368,3 +368,6 @@ We needed a way to programmatically control our self-hosted Redash instance from
 our backend services - we developed a custom dashboard screen in our product and
 Redash solved many issues for us, so we decided to use it as both the backend
 and the Data Analyst query development IDE.
+
+## Contributing
+Read more about it [here](CONTRIBUTING.md)
