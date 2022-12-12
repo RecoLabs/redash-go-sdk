@@ -13,6 +13,8 @@ An SDK for the programmatic management of Redash. The main
 component of the SDK is a **client**, which is a go wrapper of
 Redash's REST API.
 
+![DALL·E 2022-12-12 15 59 40 - A Gopher pointing at a chart in the style of vaporwave](https://user-images.githubusercontent.com/70973922/207064035-228cf4d3-0947-4588-b487-ec78a5eafdf6.png)
+
 - [Redash Go SDK](#redash-go-sdk)
   - [Usage](#usage)
     - [Installation](#installation)
